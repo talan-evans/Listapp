@@ -1,0 +1,12 @@
+<div class="dashboard-wrapper">
+    <h1>Dashboard</h1>
+    <h4 (click)="logout()">
+        Logout
+    </h4>
+    <a routerLink="/createlist">Create New List</a>
+    <hr />
+    <h3>Your Lists</h3>
+    <div *ngFor="let list of lists">
+        <app-list-summary [list]="list"></app-list-summary>
+    </div>
+</div>

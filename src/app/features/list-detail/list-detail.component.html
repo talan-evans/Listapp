@@ -1,0 +1,13 @@
+<div class="list-detail-wrapper">
+    <h1>{{ list.title }}</h1>
+    <hr />
+    <h4>Items:</h4>
+    <div *ngFor="let item of list.items">
+        <app-item [item]="item" (clickEvent)="removeItem($event)"></app-item>
+    </div>
+    <h4>Add Item</h4>
+    <input type="text" id="newItem" name="newItem" [(ngModel)]="newItem"><br />
+    <button (click)="addItem()">Add Item</button>
+    <hr />
+    <button (click)="goBack()">Back to Dashboard</button>
+</div>
